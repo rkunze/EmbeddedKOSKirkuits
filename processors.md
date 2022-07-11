@@ -2,7 +2,7 @@
 
 The *Embedded kOS Kirkuits* modlet defines a number of different processor options that can be easily added to a part by just setting the `Embedded_kOSProcessor_type` entry to the corresponding value in a MM patch that executes `BEFORE[EmbeddedKOSKirkuits]`. 
 
-The `Embedded_kOSProcessor_type` can be present either in a `PART`, a `MODULE[kOSProcessor]` or in an `UPGRADE` node. In the latter two cases, the kOSProcessor specific values will be set (or changed) to the values defined by the processor type setting. 
+The `Embedded_kOSProcessor_type` can be present either in a `PART` or a `MODULE[kOSProcessor]` node. In the latter case, the kOSProcessor specific values will be set (or changed) to the values defined by the processor type setting. 
 
 Another setting `Embedded_kOSProcessor_include` (which can only be set on a `PART` node) controls whether the kOSProcessor module is 
 
@@ -30,13 +30,6 @@ Examples:
 @PART[myProbeCore]:NEEDS[EmbeddedKOSKirkuits] {
    MODULE[kOSProcessor] {
        Embedded_kOSProcessor_type = default
-       UPGRADES {
-           UPGRADE {
-               name__ = kOSProcessorUpgrade_1
-               techRequired__ = miniaturization
-               Embedded_kOSProcessor_type = modern_medium 
-           }
-       }
    }
 }
 ```
