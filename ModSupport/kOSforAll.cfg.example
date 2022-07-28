@@ -1,6 +1,6 @@
 // Simple "kOS for All!" style configuration.
 //
-// Will install a "KR-2042 e Scriptable Core" on all probe cores and command pods 
-@PART[*]:HAS[@MODULE[ModuleCommand],!MODULE[kOSProcessor],~Embedded_kOSProcessor_include[*]]:NEEDS[kOS]:BEFORE[EmbeddedKOSKirkuits] {
+// Will install a "KR-2042 e Scriptable Core" on all probe cores and command pods
+@PART:HAS[@MODULE[ModuleCommand],!MODULE[kOSProcessor],~Embedded_kOSProcessor_include]:NEEDS[kOS]:BEFORE[EmbeddedKOSKirkuits] {
     Embedded_kOSProcessor_include =#$@EMBEDDED_KOS_KIRKUITS/Default_kOSProcessor_include$
 }
