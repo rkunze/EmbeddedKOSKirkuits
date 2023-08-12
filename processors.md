@@ -1,8 +1,8 @@
 # kOS processor options for mods
 
-The *Embedded kOS Kirkuits* modlet defines a number of different processor options that can be easily added to a part by just setting the `EmbeddedKOSProcessorType` entry to the corresponding value in a MM patch that executes before `LAST[EmbeddedKOSKirkuits]`.
+The *Embedded kOS Kirkuits* mod defines a number of different processor options that can be easily added to a part by just setting the `EmbeddedKOSProcessorType` entry to the corresponding value in a MM patch that executes before `LAST[EmbeddedKOSKirkuits]`.
 
-The `EmbeddedKOSProcessorType` can be present either in a `PART`, a `MODULE[kOSProcessor]`, or an `UPGRADE` node. In the latter two cases, the kOSProcessor specific values will be set (or changed) to the values defined by the processor type setting.
+The `EmbeddedKOSProcessorType` entry can be present either in a `PART`, a `MODULE[kOSProcessor]`, or an `UPGRADE` node. In the latter two cases, the kOSProcessor specific values will be set (or changed) to the values defined by the processor type setting.
 
 Another setting `EmbeddedKOSProcessorInclude` (which can only be set on a `PART` node) controls whether the kOSProcessor module is
 
